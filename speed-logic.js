@@ -33,6 +33,7 @@ var resetDeck = function () {
 };
 
 resetDeck();
+var $document = $(document)
 
 $(document).on('resetGame', function() {
   resetDeck();
@@ -270,8 +271,9 @@ var updateHandNames = function(hand,handClass){
   console.log(hand,handClass)
   var handArray = ['','','','',''];
   for(var i = 0; i < hand.length; i++){
-    handArray[i]=(translate(hand[i]));
+    handArray[i]=(translate(hand[i])); //do fewer of these
   }
+  //handArray.each (translate); DO MORE OF THESE
   handArray;
   for(var j = 0; j < 5; j++){
       var k = j+1
